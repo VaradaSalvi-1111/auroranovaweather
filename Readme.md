@@ -143,15 +143,15 @@ Update `db.php` with your credentials:
 
 ```php
 $host     = "localhost";
-$db_name  = "AuroraNova";
+$db_name  = "Aurora";
 $username = "postgres";
-$password = "varada20";
+$password = "";
 ```
 
 Update `send_weather.php` with your API key:
 
 ```php
-$api_key = "04c42c4ff9da1fc464dfd08f6f8e0742";
+$api_key = "";
 ```
 
 ---
