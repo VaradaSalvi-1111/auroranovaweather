@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Pacifico";
+}
+
+.container{
+    min-height: 100vh;
+    background: #08071d;
+    display: flex;
+    align-items: center;
+    background: url("images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;  /* pushes Clear to right */
+    width: 100%;
+    margin-top: 25px;
+}
+
+.container form{
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.container form label{
+    color: #fff;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.container form input,
+.container form textarea{
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding: 8px 5px;
+    outline: none;
+    height: 48px;          /* increased height */
+    font-size: 20px;
+    font-weight: bolder; 
+}
+
+.container form textarea{
+    min-height: 90px;
+    resize: none;
+}
+
+.btn-group{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    
+}
+
+#button, #clear{
+    width: 130px;
+    height: 45px;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#button, #clear{
+    width: 130px;
+    height: 45px;
+}
+
+#button:hover, #clear:hover{
+    opacity: 0.7;
+}
+body{
+    background: url("images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+h3,h1{
+    color:white;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="contact.php" method="POST">
+            <center><i><h1 style="font-family:Pacifico;">Contact Us</h1></i></center>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="mobile" placeholder="Mobile" required>
+            <br>
+           <h3>Type Your Message Here....!</h3>
+           <textarea name="message" required></textarea>
+           <br>
+           <div class="btn-group" style="margin: auto;">
+            
+             <button type="submit" name="button" style="height:45px; width:70px; ">Send</button>
+             <button type="reset" name="clear" style="height:45px; width:70px; ">Clear</button>
+    </div>
+        </form>
+    </div>
+    <br>
+    
+</body>
+</html>

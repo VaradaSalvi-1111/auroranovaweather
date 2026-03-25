@@ -1,0 +1,24 @@
+# Node modules (heavy files - never push)
+node_modules/
+# Environment variables (important secrets)
+.env
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+# VS Code settings (optional)
+.vscode/
+# Build folders (if any)
+dist/
+build/
+# Temporary files
+*.tmp
+*.temp
+# Cache
+.cache/

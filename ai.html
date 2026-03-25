@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant Demo - Home Page</title>
+    
+    <!-- Your existing CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 50px;
+            padding: 50px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .info-box {
+            background: #f8fafc;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .page-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .page-link {
+            display: block;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .page-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .demo-commands {
+            background: #fff7ed;
+            border: 2px solid #fb923c;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .demo-commands h3 {
+            color: #ea580c;
+            margin-bottom: 15px;
+        }
+        
+        .demo-commands ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .demo-commands li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #fb923c;
+        }
+        
+        .demo-commands li::before {
+            content: "🎤 ";
+            margin-right: 8px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #10b981;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+    </style>
+    
+    <!-- Voice Assistant CSS -->
+    <link rel="stylesheet" href="voice.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 AI Voice Assistant Demo</h1>
+        
+        <div class="info-box">
+            <h3>Welcome to the Voice-Enabled Website!</h3>
+            <p>This page demonstrates the AI Voice Assistant. Click the purple microphone button in the bottom-right corner and speak your command!</p>
+        </div>
+        
+        <div class="demo-commands">
+            <h3>Try These Voice Commands:</h3>
+            <ul>
+                <li>"Open home page"</li>
+                <li>"Go to profile"</li>
+                <li>"Show login page"</li>
+                <li>"Take me to register"</li>
+                <li>"Open contact page"</li>
+                <li>"Show favorites"</li>
+                
+            </ul>
+        </div>
+        
+        <h2 style="margin-top: 30px; color: #1e293b;">Navigate to Pages:</h2>
+        <div class="page-links">
+            <a href="home.php" class="page-link">🏠 Home</a>
+            <a href="index.php" class="page-link">🔐 Login</a>
+            <a href="index.php" class="page-link">📝 Register</a>
+            <a href="profile.php" class="page-link">👤 Profile</a>
+            <a href="favorites.php" class="page-link">⭐ Favorites</a>
+            <a href="contactus.html" class="page-link">📧 Contact</a>
+        </div>
+        
+       
+    </div>
+    
+    <!-- Voice Assistant JavaScript -->
+    <script src="voice.js"></script>
+    
+    <!-- Initialize with your API key -->
+    <script>
+        // Wait for voice assistant to load
+        window.addEventListener('load', function() {
+            // Set your Gemini API key here
+            if (window.voiceAssistant) {
+                // Replace 'YOUR_API_KEY_HERE' with your actual Gemini API key
+                // Get it from: https://makersuite.google.com/app/apikey
+                voiceAssistant.setApiKey('AIzaSyCdBnSmxpy1XNAhOn36KiO2ap_1QOXXtDU');
+                
+                console.log('✅ Voice Assistant ready!');
+            }
+        });
+    </script>
+</body>
+</html>
